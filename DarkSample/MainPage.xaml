@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    x:Class="DarkSample.MainPage"
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="{DynamicResource AppBackground}"
+    Title="Dark Mode"
+    x:Name="me">
+    <StackLayout BackgroundColor="{DynamicResource AppBackground}">
+        <Label Text="{Binding CurrentMode,Source={x:Reference me}}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource NormalTextColor}" />
+        <Button Text="Light" Clicked="Light_Clicked" BackgroundColor="{DynamicResource PaleBackColorPrimary}" TextColor="{DynamicResource TitleTextColor}" />
+        <Button Text="Dark" Clicked="Dark_Clicked"  BackgroundColor="{DynamicResource PaleBackColorPrimary}" TextColor="{DynamicResource TitleTextColor}"/>
+        <Button Text="Use device settings" Clicked="Auto_Clicked" BackgroundColor="{DynamicResource PaleBackColorPrimary}" TextColor="{DynamicResource TitleTextColor}" />
+        <Switch OnColor="{DynamicResource AccentColor}" />
+        <DatePicker  />
+    </StackLayout>
+</ContentPage>
